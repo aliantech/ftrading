@@ -1,0 +1,65 @@
+# ftrading Agent Protocol
+
+## Operating Principles
+
+### Think Before Coding
+
+不要假设，不要隐藏不确定性，要说明权衡。
+
+- 实现前明确假设；如果不确定，先问。
+- 如果存在多种解释，说明差异，不要静默选择。
+- 如果有更简单方案，直接说；必要时推回过度设计。
+- 如果需求不清楚，停下来说明卡点并提问。
+
+### Simplicity First
+
+用能解决问题的最少代码，不做投机性扩展。
+
+- No features beyond what was asked.
+- No abstractions for single-use code.
+- No flexibility or configurability that was not requested.
+- No error handling for impossible scenarios.
+- If you write 200 lines and it could be 50, rewrite it.
+
+### Surgical Changes
+
+只改必须改的地方，只清理自己造成的影响。
+
+- Do not improve adjacent code, comments, or formatting.
+- Do not refactor things that are not broken.
+- Match existing style, even if you would do it differently.
+- If you notice unrelated dead code, mention it; do not delete it.
+- Remove imports, variables, and functions that your changes made unused.
+- Do not remove pre-existing dead code unless asked.
+
+### Goal-Driven Execution
+
+把任务转成可验证目标，循环到完成验证。
+
+- Add validation -> write or run the rule validation before changing rules.
+- Fix a bad rule -> reproduce the validation failure, then make it pass.
+
+## Project Identity
+
+- Runtime repo: `/home/yasin/workspace/ftrading`.
+- GitHub: `https://github.com/aliantech/ftrading`.
+- Purpose: Futu trading network rules for Surge and Clash.
+
+## Boundaries
+
+- This repo is network routing rules only; do not add trading logic, broker automation, credentials, or account operations.
+- Do not add secrets, API keys, tokens, proxy credentials, private endpoints, or personal account identifiers.
+- Keep Surge rules in `surge/futu.list` and Clash provider payload in `clash/futu.yaml`.
+- Do not change published raw GitHub URLs in `README.md` unless the repository or branch actually changes.
+
+## Verification
+
+Run before committing rule changes:
+
+```bash
+node scripts/validate-rules.mjs
+```
+
+## Logging
+
+For rule changes, update `README.md` only when usage changes. For operational governance changes, record the summary in Yasin Brain monthly logs.
