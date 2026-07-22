@@ -37,11 +37,13 @@ IP-CIDR,106.55.66.0/23,no-resolve
 IP-CIDR,111.230.119.0/24,no-resolve
 IP-CIDR,111.230.214.0/24,no-resolve
 IP-CIDR,115.159.18.59/32,no-resolve
+IP-CIDR,118.89.100.23/32,no-resolve
 IP-CIDR,119.28.37.0/24,no-resolve
 IP-CIDR,119.28.141.0/24,no-resolve
 IP-CIDR,119.28.183.0/24,no-resolve
 IP-CIDR,119.28.201.30/32,no-resolve
 IP-CIDR,119.29.48.0/23,no-resolve
+IP-CIDR,119.91.240.235/32,no-resolve
 IP-CIDR,119.91.243.37/32,no-resolve
 IP-CIDR,119.91.245.0/23,no-resolve
 IP-CIDR,119.147.110.0/24,no-resolve
